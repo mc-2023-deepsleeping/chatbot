@@ -4,7 +4,7 @@ import React from 'react';
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
   const searchAI = (message) => {
-    const apiUrl = "http://34.81.38.71:5000/ask_bard";
+    const apiUrl = "http://34.81.38.71/ask_bard";
     // const apiUrl = "http://localhost:5000/ask_bard";
     
     const requestOptions = {
@@ -12,14 +12,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ Question: message }), // 將 message 作為 POST 請求的主體傳送
+      body: JSON.stringify({ "Question": message }),
     };
 
     fetch(apiUrl, requestOptions)
       .then((response) => response.json())
       .then((data) => {
         const answer = data.answer;
-                const botMessage = createChatBotMessage(answer);
+            const botMessage = createChatBotMessage(answer);
 
         setState((prev) => ({
           ...prev,
