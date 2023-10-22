@@ -1,0 +1,30 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px; /* 距离底部的距离，可以根据需要调整 */
+    right: 20px; /* 距离右侧的距离，可以根据需要调整 */
+    width: 300px; /* 适当设置聊天窗口的宽度 */
+  }
+
+  .chatbot-button {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chatbot-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .chatbot-button .arrow {
+    margin-left: 10px;
+    transition: transform 0.3s;
+  }
